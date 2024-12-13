@@ -15,7 +15,7 @@
     <script type="text/processing">
 
       //SAMPLE PROCESSING CODE -- ENDS LINE 71
-      import processing.sound.*;
+      //import processing.sound.*;
       int score, hScore, deaths;
       boolean state;
       
@@ -26,10 +26,10 @@
       JSONObject highScore;
       void setup(){
         score = 0;
-        noise = new SoundFile(this,"data/flash.mp3");
-        music = new SoundFile(this,"data/cans.mp3");
+        //noise = new SoundFile(this,"data/flash.mp3");
+        //music = new SoundFile(this,"data/cans.mp3");
         if (deaths == 0){ 
-        music.loop();
+       // music.loop();
         }
         strokeWeight(12);
         strokeJoin(ROUND);
@@ -87,7 +87,7 @@
       
       void mouseClicked(){
          toe.jump(); 
-           noise.play();
+          // noise.play();
       }
        
       class Background{
