@@ -26,14 +26,14 @@
       JSONObject highScore;
       void setup(){
         score = 0;
-        noise = new SoundFile(this,"flash.mp3");
-        music = new SoundFile(this,"cans.mp3");
+        noise = new SoundFile(this,"data/flash.mp3");
+        music = new SoundFile(this,"data/cans.mp3");
         if (deaths == 0){ 
         music.loop();
         }
         strokeWeight(12);
         strokeJoin(ROUND);
-        highScore = loadJSONObject("data.json");
+        highScore = loadJSONObject("data/data.json");
         hScore = highScore.getInt("highScore");
         textSize(128);
         state = true;
@@ -94,7 +94,7 @@
         PImage bg;
         float x,y,Vx,Vy;
          Background(){
-           bg = loadImage("bg.png");
+           bg = loadImage("data/bg.png");
            Vx = -1;
          }
          void update(){
@@ -122,7 +122,7 @@
           location = new PVector(width/4,height/2);
           velocity = new PVector(0,0);
           topspeed = 100;
-          kirbo = loadImage("kirbo.png");
+          kirbo = loadImage("data/kirbo.png");
           acceleration = new PVector(0,0.2);
           angle2 = new PVector(10,0);
         }
@@ -165,8 +165,8 @@
         location = new PVector(x,map(y,0,1,200,720));
         velocity = new PVector(0,0);
         d = 300;
-        toe = loadImage("tower.png");
-        toe2 = loadImage("tower2.png");
+        toe = loadImage("data/tower.png");
+        toe2 = loadImage("data/tower2.png");
       }
       void update(){
         location.x-=5;    
